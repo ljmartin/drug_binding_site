@@ -2,7 +2,7 @@ draft.
 
 # Finding binding sites using OpenMM 
 
-1) Take any protein, feed through CHARMM-GUI to generate an input file. step5_assembly.pdb is required for 3) below. 
+1) Take any protein, feed through CHARMM-GUI to generate an input file. The final step (step3 for solvated, step5 for membranated) stepX_assembly.pdb is required for 3) below. 
 
 2) `drug_parameterization.ipynb`: Openforcefield to generate ligand parameterization. Just input the isomeric smiles code and RDKit + openforcefield will generate correct pdbfile and AMBER forcefield-compatible parameters
 
