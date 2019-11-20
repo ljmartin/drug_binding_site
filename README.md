@@ -5,7 +5,7 @@
 
 2) Run `drug_parameterization.ipynb`: Openforcefield to generate ligand parameterization. Just input the isomeric smiles code and RDKit + openforcefield will generate correct pdbfile and AMBER forcefield-compatible parameters
 
-3) Run `system_setup.ipynb`: System setup. This combines the drug system with the membranated protein system, and gradually releases constraints on the protein over ~25 ns. Drug molecules have a pairwise repulsive bias that drops off exponentially with distance to prevent aggregation. If using with solvated protein only, change z_range to mirror x_range and y_range i.e. minmax of protein coordinates, instead of lipid coordinates. 
+3) Run `system_setup.ipynb`: System setup. This combines the drug system with the membranated protein system, and gradually releases constraints on the protein over ~25 ns. Drug molecules have a pairwise repulsive bias that drops off exponentially with distance to prevent aggregation. For solvated proteins (i.e. KRAS and T4 Lysozyme) the drugs are ranged all along the periodic boundary conditions while ensuring no clashes. For membrane systems (i.e. GlpG), the zrange is confined to the bilayer because the ligand is hydrophobic.  
 
 4) Determine the binding site. Suggest removing the protein restraint completely, or at least replacing with an alpha-carbon only restraint. Use any combination of simulated tempering, generalised-REST, metadynamics, etc. `determine_weights.ipynb` will equilibrate weights for either simulated tempering or serial g-REST 
 
