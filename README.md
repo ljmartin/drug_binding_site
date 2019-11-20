@@ -1,4 +1,3 @@
-draft.
 
 # Finding binding sites using OpenMM 
 
