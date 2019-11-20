@@ -7,7 +7,13 @@
 
 3) `system_setup.ipynb`: System setup. This combines the drug system with the membranated protein system, and gradually releases constraints on the protein over ~25 ns. Drug molecules have a pairwise repulsive bias that drops off exponentially with distance to prevent aggregation. If using with solvated protein only, change z_range to mirror x_range and y_range i.e. minmax of protein coordinates, instead of lipid coordinates. 
 
-4) Determine the binding site by any means possible. Suggest removing the protein restraint completely, or at least replacing with a alpha-carbon only restraint. Use any combination of simulated tempering, generalised-REST, metadynamics, etc to determine binding site. 
+4) Determine the binding site. Suggest removing the protein restraint completely, or at least replacing with an alpha-carbon only restraint. Use any combination of simulated tempering, generalised-REST, metadynamics, etc.
+
+
+
+
+
+
 
 
 https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html
